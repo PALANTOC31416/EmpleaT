@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Overpass', sans-serif;
     font-weight: normal;
@@ -5,7 +6,7 @@ body {
     color: #1b262c;
     
     margin: 0;
-    /*background-color: #000000;  */
+    /*background-color: #000000; */
     background: url("Imagen.jpg") center;
     background-size: 100% auto;
     background-repeat: no-repeat;
