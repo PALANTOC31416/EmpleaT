@@ -12,26 +12,41 @@
 <body>
   <div class="signupFrm">
     <div class="wrapper">
-    <form action="" class="form">
+    <form action="validaRegistro.php" method="POST" class="form">
       <h1 class="title">Registro</h1>
 
       <div class="inputContainer">
-        <input type="text" class="input" placeholder="a">
+        <input type="text" name="nombre" class="input" placeholder="a">
+        <label for="" class="label">Nombre</label>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" name="direccion" class="input" placeholder="a">
+        <label for="" class="label">Direccion</label>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" name="telefono" class="input" placeholder="a">
+        <label for="" class="label">Telefono</label>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" name="correo" class="input" placeholder="a">
         <label for="" class="label">Email</label>
       </div>
 
       <div class="inputContainer">
-        <input type="text" class="input" placeholder="a">
-        <label for="" class="label">Username</label>
+        <input type="text" name="giro" class="input" placeholder="a">
+        <label for="" class="label">Giro</label>
       </div>
 
       <div class="inputContainer">
-        <input type="text" class="input" placeholder="a">
+        <input type="text" name="contrasena" class="input" placeholder="a">
         <label for="" class="label">Password</label>
       </div>
 
       <div class="inputContainer">
-        <input type="text" class="input" placeholder="a">
+        <input type="text" name="contrasenaDos" class="input" placeholder="a">
         <label for="" class="label">Confirm Password</label>
       </div>
 
