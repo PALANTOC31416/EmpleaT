@@ -17,10 +17,13 @@
           <h1>Editar Perfil</h1>
         </header>
         <div class="left box-primary">
-          <img class="image" src="Imagenes/logo.jpg" alt="" />
+          <img class="image" src="Imagenes/logo.jpg">
           <h3 class="username text-center">Nombre corto Empresa</h3>
           <a href="#" class="btn btn-primary btn-block"><b>Editar foto</b></a>
-          <input type="image" src="Imagenes">
+          <!--input type="image" src="Imagenes"-->
+          <form name="formfoto" method="post" action="/send.php" enctype="multipart/form-data">
+            <input type="file" name="adjunto" accept=".jpeg,.jpg,.png" multiple />
+          </form>
         </div>
         <div class="right tab-content">
           <form class="form-horizontal">
