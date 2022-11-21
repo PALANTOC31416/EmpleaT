@@ -1,6 +1,19 @@
 body{
-    background-color: #ddd;
+    background-color: rgb(240, 235, 238);
+    font-family: Arial, Helvetica, sans-serif;
   }
+  header{
+    /*background-color: rgb(97, 28, 70);*/
+    background-image: url(Imagenes/EditarPerfil.jpg);
+    background-size: 50%;
+    height: 100px;
+    width: 105%;
+    margin: 0px;
+    text-align: center;
+    line-height: 100px;
+    border-bottom: 1px solid black;
+  }
+
   .container{
     margin: 0 auto;
     display: table;
@@ -130,6 +143,7 @@ body{
   }
   .left.box-primary {
       border-top-color: #3c8dbc;
+      background-color: #092a86;
       
   }
   .left {
@@ -148,4 +162,5 @@ body{
   button, meter, progress {
       -webkit-writing-mode: horizontal-tb;
   }
+  
   
