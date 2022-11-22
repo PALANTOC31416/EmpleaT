@@ -19,7 +19,7 @@ CREATE TABLE empresa(
 CREATE TABLE oferta (
     id_oferta int(5) AUTO_INCREMENT PRIMARY KEY,
     area VARHCAR(50) NOT NULL,
-    descripcion VARCHAR(100)NOT NULL,
+    nombreOferta VARCHAR(100)NOT NULL,
     fechaDePublicacion DATE NOT NULL,
     sueldo FLOAT(5) NOT NULL,
     correo VARCHAR(50) NOT NULL,
