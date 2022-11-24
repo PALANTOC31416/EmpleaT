@@ -27,7 +27,7 @@
             <div class="position-relative px-lg-5" style="z-index: 9;">
                 <nav class="navbar navbar-expand-lg bg-blues navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
                     <a href="" class="navbar-brand">
-                        <img class="text-uppercase text-primary mb-1" src="Imagenes/EmpleaTLogo.png" height="100px" alt="Image">
+                        <img class="text-uppercase text-primary mb-1 logo" src="Imagenes/EmpleaTLogo.png" height="100px" alt="Image">
                     </a>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
@@ -38,7 +38,19 @@
         <!-- Navbar End -->
 
         <h1 class="display-3 text-uppercase text-center mb-4">Bienvenido a <span class="text-primary">EmpleaT</span></h1>
-    
+        <!-- Inicio Menu -->
+        <center>
+            <nav>
+                <div id="menu"> 
+                    <ul class="menup"> 
+                        <li><a href="index.php">Inicio</a></li>
+                        <li><a href="IniciarSesion.html">Iniciar Sesion como Empresa</a></li>
+                        <li><a href="Registro.html">Registrar Empresa</a></li>
+                    </ul>
+                </div>
+            </nav>
+	    </center>
+        <!-- Fin Menu -->
         <!-- Carousel Start -->
         <div class="container-fluid p-0" style="margin-bottom: 90px;">
             <div id="header-carousel" class="carousel slide" data-ride="carousel">
@@ -96,7 +108,7 @@
                 </a>
             </div>
         </div>
-        <!-- Carousel End -->  
+        <!-- Carousel End -->
         <!-- Rent A Car Start -->
         <div class="container-fluid py-5">
             <div class="container pt-5 pb-3">
