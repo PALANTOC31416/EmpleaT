@@ -313,3 +313,226 @@ h6,
     background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url(../img/bg-banner.jpg);
     background-attachment: fixed;
 }
+
+/*Menu*/
+nav{
+    width: auto;
+    height: 35px;
+}
+    
+#menu{
+    width: 80%;
+    height: 35px;
+    background-color: #4ea7cd;
+    position: relative;
+} 
+    
+#menu .menup{
+    width: auto;
+    height: 35px;
+    margin: auto auto auto 25%;
+    padding: 0px;
+}
+    
+#menu li{
+    float:left;
+    position:relative;
+    padding: 6px 0;
+    margin: 0;
+    list-style: none;
+} 
+    
+#menu li a{
+    color:#ffffff;
+    font-size:12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 1em;
+} 
+    
+    /*ocultamos el dropdown*/    
+#menu li > ul{
+    display:none;
+    position:absolute;
+    padding: 0;
+    z-index: 2;
+}
+    
+#menu li > ul li{
+    padding:0;
+    margin:1px 0;
+    list-style: none;
+} 
+        
+#menu li > ul li:first-child, #menu li:hover > ul li:last-child{
+    padding:0;
+    margin:0 0;
+}
+    
+    /*le damos el color blanco al enlance del submenu y el background negro */    
+#menu li:hover > a{
+    color:#fff;
+    background-color: #a2a3a5;
+    width: 120px; 
+} 
+    
+#menu li > ul li a{
+    width: 150px;
+    margin: 0 0 0 5px;
+    display:block;
+    color: #fff;
+} 
+    
+/* Con esto mantenemos el codigo submenu activo */
+#menu li:hover > ul{
+    display:block;
+    width: 150px;
+    top: 35px;
+}
+    
+#menu .divider{
+    border-right: 1px solid #BCBCBC;
+    height: 23px;
+}
+
+#menu .dropdown::after{
+    content:"";
+    position: absolute;
+    top: 15px;
+    left: 60px;
+    width:0px;
+    height:0px;
+    border-style: solid;
+    border-width: 4.3px;
+    border-bottom-width:0px;
+    border-color: #BCBCBC transparent transparent transparent;
+}
+    
+#menu li:hover::after{
+    border-color: #fff transparent transparent transparent;
+}
+    
+#menu .dropdown span{
+    height: 15px;
+    width: 3px;
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+/*Fin menu*/
+
+/*
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*background-color: rgb(0, 0, 0);  
+    font-family: "lato", sans-serif;
+    background-image: url(Imagenes/fondo1.jpg);
+    color: black;  
+  }
+  */
+    .centrado{
+    text-align:center;
+    padding:8px;
+    }
+    
+    .signupFrm {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    
+    .form {
+      background-color: rgb(255, 255, 255);
+      width: 400px;
+      border-radius: 8px;
+      padding: 20px 40px;
+      box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    }
+    
+    .title {
+      font-size: 50px;
+      margin-bottom: 50px;
+    }
+    
+    .inputContainer {
+      position: relative;
+      height: 45px;
+      width: 70%;
+      margin-bottom: 17px;
+    }
+    
+    .input {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      border: 1px solid #494f5c;
+      border-radius: 7px;
+      font-size: 16px;
+      padding: 0 20px;
+      outline: none;
+      background: none;
+      z-index: 1;
+    }
+    
+    
+    .label {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      padding: 0 4px;
+      background-color: white;
+      color: #9a9b9f;
+      font-size: 16px;
+      transition: 0.8s;
+      z-index: 0;
+    }
+    
+    ::placeholder {
+      color: transparent;
+    }
+    
+    .submitBtn {
+      display: block;
+      margin-left: auto;
+      padding: 15px 30px;
+      border: none;
+      background-color: rgb(23, 237, 137);
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 30px;
+    }
+    
+    .submitBtn:hover {
+      background-color: #1de178;
+      transform: translateY(-2px);
+    }
+    .input:focus + .label {
+      top: -7px;
+      left: 3px;
+      z-index: 10;
+      font-size: 14px;
+      font-weight: 600;
+      color: purple;
+    }
+    
+    .input:not(:placeholder-shown)+ .label {
+      top: -7px;
+      left: 3px;
+      z-index: 10;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .input:focus {
+      border: 2px solid purple;
+    }
