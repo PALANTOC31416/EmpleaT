@@ -534,5 +534,5 @@ body {
     }
     
     .input:focus {
-      border: 2px solid purple;
+      border: 2px solid rgb(73, 69, 73);
     }
