@@ -19,7 +19,7 @@
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- Template Stylesheet -->
-        <link href="css/style-indexEmpresa.css" rel="stylesheet">
+        <link href="css/style-indexOfertaEmpleo.css" rel="stylesheet">
     </head>
     <body>
 
@@ -46,225 +46,79 @@
                 <div id="menu"> 
                     <ul class="menup"> 
                         <li><a href="index.php">Inicio</a></li>
-                        <li><a href="index-OfertaEmpleo.html">OFERTAS DE EMPLEO</a></li>
-                        <li><a href="index-AgregarOfertaEmp.html">REGISTRAR OFERTA DE EMPLEO</a></li>
+                        <li><a href="IniciarSesion.html">OFERTAS DE EMPLEO</a></li>
+                        <li><a href="Registro.html">REGISTRAR OFERTA DE EMPLEO</a></li>
                     </ul>
                 </div>
             </nav>
 	    </center>
         <!-- Fin Menu -->
 
-        <!-- Navbar Start 
-        <div class="container-fluid position-relative nav-bar p-0">
-            <div class="position-relative px-lg-5" style="z-index: 9;">
-                <nav class="navbar navbar-expand-lg bg-blues navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                    <a href="" class="navbar-brand">
-                        <img class="text-uppercase text-primary mb-1" src="Imagenes/EmpleaTLogo.png" height="100px" alt="Image">
-                    </a>
-                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                        <div class="navbar-nav ml-auto py-0">
-                            <a href="index.html" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <a href="service.html" class="nav-item nav-link">Service</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Cars</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="car.html" class="dropdown-item">Car Listing</a>
-                                    <a href="detail.html" class="dropdown-item">Car Detail</a>
-                                    <a href="booking.html" class="dropdown-item">Car Booking</a>
-                                </div>
-                            </div>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="team.html" class="dropdown-item">The Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        Navbar End -->
-    
-        <!-- Carousel Start 
-        <div class="container-fluid p-0" style="margin-bottom: 90px;">
-            <div id="header-carousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img class="w-100" src="Imagenes/Albanil.jpg" alt="Image">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 600px;">
-                                <h4 class="text-white text-uppercase mb-md-3">Vacante disponible</h4>
-                                <h1 class="display-1 text-white mb-md-4">Obrero</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Clic aqui</a>
+        <!-- Rent A Car Start -->
+        <div class="container-fluid py-5">
+            <div class="container pt-5 pb-3">
+                <h1 class="display-4 text-uppercase text-center mb-5">Vacantes de Empleo</h1>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-2">
+                            <div class="rent-item mb-4">
+                                <img class="img-fluid mb-4" src="Imagenes/icons8-carpintero-89.png" alt="">
+                                <h4 class="text-uppercase mb-4">Carpinteria</h4>
+                                <p>%s</p>
+                                <a class="btn btn-primary px-3" href=""> Editar </a>
+                                <a class="btn btn-primary px-3" href=""> Eliminar </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img class="w-100" src="Imagenes/Carpinteria.jpg" alt="Image">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 600px;">
-                                <h4 class="text-white text-uppercase mb-md-3">Vacante disponible</h4>
-                                <h1 class="display-1 text-white mb-md-4">Carpinteria</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Clic aqui</a>
-                            </div>
+                    <div class="col-lg-4 col-md-6 mb-2">
+                        <div class="rent-item mb-4">
+                            <img class="img-fluid mb-4" src="Imagenes/cerrajero.png" alt="">
+                            <h4 class="text-uppercase mb-4">Cerrajero</h4>
+                            <p>fecha de publicacion</p>
+                            <a class="btn btn-primary px-3" href=""> Editar </a>
+                            <a class="btn btn-primary px-3" href=""> Eliminar </a>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="w-100" src="Imagenes/Soldador.jpg" alt="Image">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 600px;">
-                                <h4 class="text-white text-uppercase mb-md-3">Vacante disponible</h4>
-                                <h1 class="display-1 text-white mb-md-4">Soldadadura</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Clic aqui</a>
-                            </div>
+                    <div class="col-lg-4 col-md-6 mb-2">
+                        <div class="rent-item mb-4">
+                            <img class="img-fluid mb-4" src="Imagenes/mecanico.png" alt="">
+                            <h4 class="text-uppercase mb-4">Mecánico</h4>
+                            <p>fecha de publicacion</p>
+                            <a class="btn btn-primary px-3" href=""> Editar </a>
+                            <a class="btn btn-primary px-3" href=""> Eliminar </a>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img class="w-100" src="Imagenes/Carpinteria.jpg" alt="Image">
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                            <div class="p-3" style="max-width: 600px;">
-                                <h4 class="text-white text-uppercase mb-md-3">Vacante disponible</h4>
-                                <h1 class="display-1 text-white mb-md-4">Carpinteria</h1>
-                                <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Clic aqui</a>
-                            </div>
+                    <div class="col-lg-4 col-md-6 mb-2">
+                        <div class="rent-item mb-4">
+                            <img class="img-fluid mb-4" src="Imagenes/icons8-welder-89.png" alt="">
+                            <h4 class="text-uppercase mb-4">Soldador</h4>
+                            <p>fecha de publicacion</p>
+                            <a class="btn btn-primary px-3" href=""> Editar </a>
+                            <a class="btn btn-primary px-3" href=""> Eliminar </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-2">
+                        <div class="rent-item mb-4">
+                            <img class="img-fluid mb-4" src="Imagenes/icons8-hairdresser-89.png" alt="">
+                            <h4 class="text-uppercase mb-4">Estilista</h4>
+                            <p>fecha de publicacion</p>
+                            <a class="btn btn-primary px-3" href=""> Editar </a>
+                            <a class="btn btn-primary px-3" href=""> Eliminar </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-2">
+                        <div class="rent-item mb-4">
+                            <img class="img-fluid mb-4" src="Imagenes/icons8-architect-89.png" alt="">
+                            <h4 class="text-uppercase mb-4">Obrero</h4>
+                            <p>fecha de publicacion</p>
+                            <a class="btn btn-primary px-3" href=""> Editar </a>
+                            <a class="btn btn-primary px-3" href=""> Eliminar </a>
                         </div>
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
-                    <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                        <span class="carousel-control-prev-icon mb-n2"></span>
-                    </div>
-                </a>
-                <a class="carousel-control-next" href="#header-carousel" data-slide="next">
-                    <div class="btn btn-dark" style="width: 45px; height: 45px;">
-                        <span class="carousel-control-next-icon mb-n2"></span>
-                    </div>
-                </a>
             </div>
         </div>
-        Carousel End -->  
-        <!-- Rent A Car Start-->
-        <!--
-        <div class="container-fluid py-5">
-            <div class="container pt-5 pb-3">
-                <h1 class="display-4 text-uppercase text-center mb-5">Ofertas de empleo</h1>
-                <div class="row">
-					
-					<section class="cards-section text-center">
-						<div class="container">
-							<h2 class="title">VACANTES</h2>
-							<div class="intro">
-								<p>Bienvenidos a la seccion de Vacantes.</p>
-								
-							</div>//intro
-							<div id="cards-wrapper" class="cards-wrapper row">
-								<div class="item item-green col-lg-4 col-6">
-									<div class="item-inner">
-										
-                                        <div class="icon-holder">
-											<i class="icon fa fa-paper-plane" src="Imagenes/icon vacante.jpg"></i>
-										</div>//icon-holder
-										<h3 class="title" style="max-width: 18rem;"> VACANTE 1</h3>
-										<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-											<div class="card-header">Nombre</div>
-											<div class="card-body">
-											  <h5 class="card-title">Descripcion</h5>
-											  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											</div>
-										  </div>
-										<a class="link" href="start.html"><span></span></a>
-									</div>item-inner
-								</div>item
-								<div class="item item-pink item-2 col-lg-4 col-6">
-									<div class="item-inner">
-										<div class="icon-holder">
-											<span aria-hidden="true" class="icon icon_puzzle_alt"></span>
-										</div>//icon-holder-
-										<h3 class="title" style="max-width: 18rem;"> VACANTE 2</h3>
-										<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-											<div class="card-header">Nombre</div>
-											<div class="card-body">
-											  <h5 class="card-title">Descripcion</h5>
-											  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											</div>
-										  </div>
-										<a class="link" href="components.html"><span></span></a>
-									</div>//item-inner
-								</div>//item
-								<div class="item item-blue col-lg-4 col-6">
-									<div class="item-inner">
-										<div class="icon-holder">
-											<span aria-hidden="true" class="icon icon_datareport_alt"></span>
-										</div>//icon-holder
-										<h3 class="title" style="max-width: 18rem;">VACANTE 3</h3>
-										<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-											<div class="card-header">Nombre</div>
-											<div class="card-body">
-											  <h5 class="card-title">Descripcion</h5>
-											  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											</div>
-										  </div>
-										<a class="link" href="charts.html"><span></span></a>
-									</div>
-								</div>
-								<div class="item item-purple col-lg-4 col-6">
-									<div class="item-inner">
-										<div class="icon-holder">
-											<span aria-hidden="true" class="icon icon_lifesaver"></span>
-										</div>
-										<h3 class="title" style="max-width: 18rem;">VACANTE 4</h3>
-										<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-											<div class="card-header">Nombre</div>
-											<div class="card-body">
-											  <h5 class="card-title">Descripcion</h5>
-											  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											</div>
-										  </div>
-										<a class="link" href="faqs.html"><span></span></a>
-									</div>
-								</div>
-								<div class="item item-primary col-lg-4 col-6">
-									<div class="item-inner">
-										<div class="icon-holder">
-											<span aria-hidden="true" class="icon icon_genius"></span>
-										</div>
-										<h3 class="title" style="max-width: 18rem;">VACANTE 5</h3>
-										<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-											<div class="card-header">Nombre</div>
-											<div class="card-body">
-											  <h5 class="card-title">Descripcion</h5>
-											  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											</div>
-										  </div>
-										<a class="link" href="showcase.html"><span></span></a>
-									</div>
-								</div>
-								<div class="item item-orange col-lg-4 col-6">
-									<div class="item-inner">
-										<div class="icon-holder">
-											<span aria-hidden="true" class="icon icon_gift"></span>
-										</div>
-										<h3 class="title" style="max-width: 18rem;">VACANTE 6</h3>
-										<div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-											<div class="card-header">Nombre</div>
-											<div class="card-body">
-											  <h5 class="card-title">Descripcion</h5>
-											  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-											</div>
-										  </div>
-										<a class="link" href="license.html"><span></span></a>
-									</div>
-								</div>
-								
-							</div>
-                    
+        <!-- Rent A Car End -->
+
+					<!--
                     <div class="col-lg-4 col-md-6 mb-2">
                             <div class="rent-item mb-4">
                                 <img class="img-fluid mb-4" src="Imagenes/icons8-carpintero-89.png" alt="">
@@ -307,16 +161,14 @@
                             <a class="btn btn-primary px-3" href="">Participar</a>
                         </div>
                     </div>
-				
+				-->
 				
                 </div>
             </div>
         </div>
-    -->
         <!-- Rent A Car End -->
 		
-
-		<!--
+        <!--
 		<div class="container-fluid py-5">
             <div class="container pt-5 pb-3">
                 <h1 class="display-4 text-uppercase text-center mb-5">Agregar Oferta de empleo</h1>
@@ -324,25 +176,25 @@
                     <label>Area: </label>
                     <div class="inputContainer">
                         <input type="text" name="nombre" class="input" placeholder="a">
-                        <label for="" class="label">Area</label>
+                        <label for="" class="label">Area</label> 
                       </div>
 
                       <label>Nombre: </label>
                       <div class="inputContainer">
                         <input type="text" name="nombre" class="input" placeholder="a">
-                        <label for="" class="label">Nombre</label> 
+                        <label for="" class="label">Nombre</label>
                       </div>
 
                       <label>Email: </label>
                       <div class="inputContainer">
                         <input type="text" name="nombre" class="input" placeholder="a">
-                        <label for="" class="label">Email</label> 
+                        <label for="" class="label">Email</label>
                       </div>
 
                       <label>Sueldo: </label>
                       <div class="inputContainer">
                         <input type="text" name="nombre" class="input" placeholder="a">
-                        <label for="" class="label">Sueldo</label> 
+                        <label for="" class="label">Sueldo</label>
                       </div>
 
                       <label>Descripcion: </label>
@@ -354,7 +206,7 @@
                       
                         <div class="cta-container">
 							<a class="btn btn-primary btn-cta" href="https://themes.3rdwavemedia.com/bootstrap-templates/startup/prettydocs-free-bootstrap-theme-for-developers-and-startups/" target="_blank"><i class="fas fa-cloud-acept-alt"></i> Agregar </a>
-						</div>//cta-container
+						</div><//cta-container
 
 					
                     <div class="col-lg-4 col-md-6 mb-2">
@@ -405,7 +257,6 @@
         </div>
     -->
         <!--Rent A Car End -->
-
         <!-- Banner Start -->
         <!--
         <div class="container-fluid py-5">
@@ -416,7 +267,7 @@
                             <img class="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="img/banner-left.png" alt="">
                             <div class="text-right">
                                 <h3 class="text-uppercase text-light mb-3">¿Deseas publicar algun empleo?</h3>
-                                <p class="mb-4">Lorem justo sit sit ipsum eos lorem kasd, kasd labore</p> 
+                                <p class="mb-4">Lorem justo sit sit ipsum eos lorem kasd, kasd labore</p>
                                 <a class="btn btn-primary py-2 px-4" href="">Saber mas...</a>
                             </div>
                         </div>
