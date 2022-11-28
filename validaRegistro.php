@@ -9,8 +9,8 @@
     $contrasena = $_POST["contrasena"];
     $contrasena2 = $_POST["contrasenaDos"];
   
-    if(!tieneInformacion() && !existeCorreo($correo)) {
-        $instruccion_SQL = "INSERT INTO empresa(nombre, direccion, telefono, correo,contrasena, giro)
+    if(tieneInformacion($nombre,$direccion,$telefono,$correo,$giro,$contrasena,$contrasena2) && !existeCorreo($correo)) {
+        $instruccion_SQL = "INSERT INTO empresas(nombre, direccion, telefono, correo,contrasena, giro)
         VALUES ('$nombre','$direccion',$telefono,'$correo','$contrasena','$giro')";
                                                   
         $resultado = mysqli_query($connection,$instruccion_SQL);
@@ -22,21 +22,18 @@
         echo "<script language='JavaScript'> location.assign('Registro.html')</script>";
     }
 
-    function tieneInformacion() {
-        if(empty($nombre) || empty($direccion) || empty($telefono) || empty($correo) || empty($giro) || empty($contrasena) || empty($contrasena2)) {
-            return false;
-        }else {
-            return true;
-        }
+    function tieneInformacion($nombre,$direccion,$telefono,$correo,$giro,$contrasena,$contrasena2) {
+        return !(empty($nombre) || empty($direccion) || empty($telefono) || empty($correo) || empty($giro) || empty($contrasena) || empty($contrasena2));
     }
 
     function existeCorreo($correo) {
         require "conexion.php";
-        if($result = mysqli_query($connection,"SELECT * FROM empresa WHERE correo = '$correo'")) {
+        if($result = mysqli_query($connection,"SELECT * FROM empresas WHERE correo = '$correo'")) {
             $correok = "a";
             while ($row = $result->fetch_array()) {
                 $correok = $row['correo'];
             }
+            echo $correo;
             $result->close();
             if($correok == $correo) {
                 echo "<script language='JavaScript'>
