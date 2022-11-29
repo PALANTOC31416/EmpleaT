@@ -29,8 +29,24 @@ h6,
     height: 36px;
 }
 
+.encabezado {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+
+    justify-content: center;
+}
+
 .logo {
-    margin: 45% 0 0 0;
+    width: 20%;
+    height: auto;
+    /* margin: 0% 0 0 0; */
+}
+
+.mb-4 {
+    width: 65%;
+    height: auto;
+    margin: 8% 0%;
 }
 
 .btn-sm-square {

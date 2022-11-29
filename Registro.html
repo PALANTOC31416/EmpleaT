@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-Registro.css">
+    <link rel="stylesheet" href="css/style-Registro.css">
     <script src="js/bootstrap.js"></script>
 
-    <title>EmpleaT - Registro</title>
+    <title>Registrarse</title>
 </head>
 <body>
   <div class="signupFrm">
     <div class="wrapper">
-    <form action="validaRegistro.php" method="POST" class="form">
+    <form action="validaRegistro.php" method="POST" class="form" enctype="multipart/form-data">
       <h1 class="title" >
         <p class="centrado">Registro</p> 
       </h1>
@@ -47,9 +47,9 @@
         <label for="" class="label">Contraseña</label>
       </div>
 
-      <div class="inputContainer">
-        <input type="password" name="contrasenaDos" class="input" placeholder="a">
-        <label for="" class="label">Confirmar contraseña</label>
+      <div class="inputContainerFile">
+        <label for="" class="labelFile">Ingrese su logo</label>
+        <input type="file" name="archivo" id="archivo" class="inputFile" placeholder="logo">
       </div>
       
       <input type="submit" class="submitBtn" value="Crear cuenta">

@@ -13,7 +13,8 @@ CREATE TABLE empresas(
     telefono CHAR(10)NOT NULL,
     correo VARCHAR(50) NOT NULL PRIMARY KEY,
     contrasena VARCHAR(50)NOT NULL,
-    giro VARCHAR(50) NOT NULL
+    giro VARCHAR(50) NOT NULL,
+    logo_empresa VARCHAR(60) NOT NULL
 );
 
 CREATE TABLE ofertas (

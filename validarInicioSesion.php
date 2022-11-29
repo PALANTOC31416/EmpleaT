@@ -6,7 +6,7 @@
     existeUsuario($correo,$contrasena);
     if(tieneInformacion($correo,$contrasena) && existeUsuario($correo,$contrasena)) {
         echo "<script language='JavaScript'>
-            location.assign('index-Empresa.html');
+            location.assign('SesionIniciada.php');
             </script>";
     }else {
         echo "<script language='JavaScript'>
