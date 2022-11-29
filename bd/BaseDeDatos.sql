@@ -35,7 +35,18 @@ CREATE TABLE postulaciones(
     FOREIGN KEY(CURP) REFERENCES aspirantes(CURP)
 );
 
+/*Empresas*/
 INSERT INTO empresas(nombre,direccion,telefono,correo,contrasena,giro) VALUES("Carpinteria Don Pedro","Calle 2 Oriente","2381452386","pedrito@gmail.com","pedrito1234","comisionista");
-INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) VALUES (NULL,"Construccion","Carpintero con o sin experiencia","2022-05-03",4500,"pedrito@gmail.com");
-INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) VALUES (NULL,"Chofer","Chofer de camionea","2022-05-04",3500,"pedrito@gmail.com");
-INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) VALUES (NULL,"Principal","Mantenimiento a la area de corte","2022-05-05",2800,"pedrito@gmail.com");
+/*ofertas*/
+INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) 
+VALUES (NULL,"RH","Administrador de empresas, para incorporar...","2022-12-05",20000,"osapat@gmail.com");
+INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) 
+VALUES (NULL,"Contaduria","Contador publico para implementar...","2022-12-24",35000,"osapat@gmail.com");
+INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) 
+VALUES (NULL,"Envazado","Ingeniero Mecatronico para soporte a maquinaria","2022-12-04",35000,"peñafiel@gmail.com");
+INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) 
+VALUES (NULL,"Mantenimiento","Ingeniero Electromecanico, para mantenimiento de instalaciones electricas","2022-12-10",20000,"peñafiel@gmail.com");
+INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) 
+VALUES (NULL,"RH","Ingeniero en Sistemas o carrera a fin, para reclutar personal.","2022-10-04",18000,"miniempresa@gmail.com");
+INSERT INTO ofertas(id_oferta,area,nombreOferta,fechaDePublicacion,sueldo,correo) 
+VALUES (NULL,"Finanzas","Contador publico","2022-11-06",24000,"miniempresa@gmail.com");

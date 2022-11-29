@@ -3,8 +3,14 @@
 
     $correo = $_POST["usuario"];
     $contrasena = $_POST["contrasena"];
-    existeUsuario($correo,$contrasena);
+
     if(tieneInformacion($correo,$contrasena) && existeUsuario($correo,$contrasena)) {
+        #iniciamos sesion
+        session_start();
+        #guardamos el nombre en una variable de sesion
+        $_SESSION["id_empresa"] = $correo;
+        $_SESSION["nombre_empresa"] = obtenerNombreEmpresa($correo);
+        
         echo "<script language='JavaScript'>
             location.assign('SesionIniciada.php');
             </script>";
@@ -28,6 +34,18 @@
             }
             $result->close();
             return ($correok == $correo);
+        }
+    }
+
+    function obtenerNombreEmpresa($correo) {
+        require "conexion.php";
+        if($result = mysqli_query($connection,"SELECT nombre FROM empresas WHERE correo = '$correo'")) {
+            $nombre = "a";
+            while ($row = $result->fetch_array()) {
+                $nombre = $row['nombre'];
+            }
+            $result->close();
+            return $nombre;
         }
     }
 ?>

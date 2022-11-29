@@ -42,15 +42,15 @@
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- Template Stylesheet -->
-        <link href="css/style-indexEmpresa.css" rel="stylesheet">
+        <link href="css/style-indexOfertaEmpleo.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style-RegistroDatos.css">
+        <script src="js/bootstrap.js"></script>
     </head>
     <body>
-
         <div class="encabezado">
             <img class="text-uppercase text-primary mb-1 logo" src="<?php echo $logo?>" height="100px" alt="Image">
             <h1 class="display-3 text-uppercase text-center mb-4">Bienvenido <?php echo $nombreEmpresa;?></h1>
         </div>
-        <!-- Navbar End -->
         <!-- Inicio Menu -->
         <center>
             <nav>
@@ -65,37 +65,31 @@
 	    </center>
         <!-- Fin Menu -->
 
-        <!-- Rent A Car Start -->
-        <div class="container-fluid py-5">
-            <div class="container pt-5 pb-3">
-                <h1 class="display-4 text-uppercase text-center mb-5">Vacantes de Empleo</h1>
-                <div class="row">
-                    <?php 
-                        require "Conexion.php";
-                        /*invoca una instruccion de sql*/
-                        $result = mysqli_query($connection,"SELECT correo,nombreOferta,area,fechaDePublicacion,sueldo FROM ofertas WHERE correo = '$correoEmpresa'");
-                        while($row = mysqli_fetch_array($result)) {
-                            printf('<div class="col-lg-4 mb-2">
-                            <div class="rent-item mb-2">
-                                <img class="img-fluid mb-4" src="Imagenes/iconDefect.png" alt="">
-                                <br>
-                                <h3 class="text-uppercase">%s</h3>
-                                <br>
-                                <h4>%s</h4>
-                                <p>%s</p>
-                                <p>%s</p>
-                                <a class="btn btn-primary px-3" href="">Editar</a>
-                                <a class="btn btn-primary px-3" href="">Eliminar</a>
-                            </div>
-                        </div>', $row["nombreOferta"], $row["area"], $row["fechaDePublicacion"],$row["sueldo"]);
-                        }
-                        mysqli_free_result($result);
-                        mysqli_close($connection);
-                    ?>
-                </div>
+		<div class="signupFrm">
+            <div class="wrapper">
+                <form action="validaRegistro.php" method="POST" class="form">
+                    <h1 class="title" >
+                        <p class="centrado">Registro de datos</p> 
+                    </h1>
+
+                    <div class="inputContainer">
+                        <input type="text" name="nombre" class="input" placeholder="a">
+                        <label for="" class="label">Area</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <input type="text" name="municipio" class="input" placeholder="a">
+                        <label for="" class="label">Nombre de la oferta</label>
+                    </div>
+
+                    <div class="inputContainer">
+                        <input type="text" name="entidad" class="input" placeholder="a">
+                        <label for="" class="label">Sueldo</label>
+                    </div>
+                    <input type="submit" class="submitBtn" value="Registrar datos">
+                </form>
             </div>
         </div>
-        <!-- Rent A Car End -->
 
         <!-- JavaScript Libraries -->
         <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
