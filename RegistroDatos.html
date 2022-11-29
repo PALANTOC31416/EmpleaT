@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style-Registro.css">
+    <link rel="stylesheet" href="css/style-RegistroDatos.css">
     <script src="js/bootstrap.js"></script>
 
-    <title>Registrarse</title>
+    <title>EmpleaT - Registro</title>
 </head>
 <body>
   <div class="signupFrm">
     <div class="wrapper">
-    <form action="validaRegistro.php" method="POST" class="form" enctype="multipart/form-data">
+    <form action="validaRegistro.php" method="POST" class="form">
       <h1 class="title" >
-        <p class="centrado">Registro</p> 
+        <p class="centrado">Registro de datos</p> 
       </h1>
 
       <div class="inputContainer">
         <input type="text" name="nombre" class="input" placeholder="a">
         <label for="" class="label" style="color: #000;">Nombre</label>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" name="municipio" class="input" placeholder="a">
+        <label for="" class="label" style="color: #000;">Municipio</label>
+      </div>
+
+      <div class="inputContainer">
+        <input type="text" name="entidad" class="input" placeholder="a">
+        <label for="" class="label" style="color: #000;">Entidad</label>
       </div>
 
       <div class="inputContainer">
@@ -41,20 +51,23 @@
         <input type="text" name="giro" class="input" placeholder="a">
         <label for="" class="label" style="color: #000;">Giro</label>
       </div>
-      
+
+      <div class="inputContainer">
+        <input type="text" name="sueldo" class="input" placeholder="a">
+        <label for="" class="label" style="color: #000;">Sueldo</label>
+      </div>
+      <!--
       <div class="inputContainer">
         <input type="password" name="contrasena" class="input" placeholder="a">
-        <label for="" class="label" style="color: #000;">Contraseña</label>
+        <label for="" class="label">Contraseña</label>
       </div>
 
-      <div class="inputContainerFile">
-        <label for="" class="labelFile" style="color: #000;">Ingrese su logo</label>
+      <div class="inputContainer">
+        <input type="password" name="contrasenaDos" class="input" placeholder="a">
+        <label for="" class="label">Confirmar contraseña</label>
       </div>
-
-      <div class="inputContainerFile">
-        <input type="file" name="archivo" id="archivo" class="inputFile" placeholder="logo">
-      </div>
-      <input type="submit" class="submitBtn" value="Crear cuenta">
+      -->
+      <input type="submit" class="submitBtn" value="Registrar datos">
     </form>
     </div>
   </div>
