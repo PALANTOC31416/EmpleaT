@@ -36,9 +36,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet"> 
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
-        <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- Template Stylesheet -->
@@ -73,41 +70,35 @@
                     <?php 
                         require "Conexion.php";
                         /*invoca una instruccion de sql*/
-                        $result = mysqli_query($connection,"SELECT correo,nombreOferta,area,fechaDePublicacion,sueldo FROM ofertas WHERE correo = '$correoEmpresa'");
+                        $result = mysqli_query($connection,"SELECT id_oferta,correo,nombreOferta,area,fechaDePublicacion,sueldo FROM ofertas WHERE correo = '$correoEmpresa'");
                         while($row = mysqli_fetch_array($result)) {
-                            printf('<div class="col-lg-4 mb-2">
-                            <div class="rent-item mb-2">
-                                <img class="img-fluid mb-4" src="Imagenes/iconDefect.png" alt="">
-                                <br>
-                                <h3 class="text-uppercase">%s</h3>
-                                <br>
-                                <h4>%s</h4>
-                                <p>%s</p>
-                                <p>%s</p>
-                                <a class="btn btn-primary px-3" href="">Editar</a>
-                                <a class="btn btn-primary px-3" href="">Eliminar</a>
+                        ?>
+                            <div class="col-lg-4 mb-2">
+                                <div class="rent-item mb-2">
+                                    <img class="img-fluid mb-4" src="Imagenes/iconDefect.png" alt="">
+                                    <br>
+                                    <p style="display:none;"><?php echo $row["id_oferta"]; ?></p>
+                                    <h3 class="text-uppercase"><?php echo $row["nombreOferta"]; ?></h3>
+                                    <br>
+                                    <h4><?php echo $row["area"]; ?></h4>
+                                    <p><?php echo $row["fechaDePublicacion"];?></p>
+                                    <p><?php echo $row["sueldo"];?></p>
+                                    <a class="btn btn-primary px-3" href="ModificarOferta.php?id_oferta=<?php echo $row["id_oferta"]; ?>">Editar</a>
+                                    <a class="btn btn-primary px-3" href='EliminarOferta.php?id_oferta=<?php echo $row["id_oferta"];?>'>Eliminar</a>
+                                </div>
                             </div>
-                        </div>', $row["nombreOferta"], $row["area"], $row["fechaDePublicacion"],$row["sueldo"]);
+                        <?php
                         }
                         mysqli_free_result($result);
                         mysqli_close($connection);
-                    ?>
+                        ?>
                 </div>
             </div>
         </div>
         <!-- Rent A Car End -->
 
         <!-- JavaScript Libraries -->
-        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/tempusdominus/js/moment.min.js"></script>
-        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
     </body>
 </html>

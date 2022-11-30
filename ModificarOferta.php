@@ -1,26 +1,3 @@
-<?php
-    require "conexion.php";
-    $logo = "a";
-    $correoEmpresa;
-    $nombreEmpresa;
-
-    session_start();
-    if (isset($_SESSION["id_empresa"])) {
-
-        $correoEmpresa = $_SESSION["id_empresa"];
-        $nombreEmpresa = $_SESSION["nombre_empresa"];
-
-        if($result = mysqli_query($connection,"SELECT logo_empresa FROM empresas WHERE correo = '$correoEmpresa'")) {
-            while ($row = $result->fetch_array()) {
-                $logo = $row['logo_empresa'];
-            }
-            $result->close();
-        }
-    }else{
-        header('Location: IniciarSesion.html');//Aqui lo redireccionas al lugar que quieras.
-        die();
-    }
-?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
