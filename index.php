@@ -103,7 +103,7 @@
                     <?php 
                         require "Conexion.php";
                         /*invoca una instruccion de sql*/
-                        $result = mysqli_query($connection,'SELECT id_oferta,logo_empresa,nombreOferta,area,fechaDePublicacion,sueldo FROM ofertas JOIN empresas ON ofertas.correo=empresas.correo');
+                        $result = mysqli_query($connection,'SELECT logo_empresa,nombreOferta,area,fechaDePublicacion,sueldo,id_oferta FROM ofertas JOIN empresas ON ofertas.correo=empresas.correo');
                         while($row = mysqli_fetch_array($result)) {
                         ?>
                             <div class="col-lg-4 mb-2">
@@ -115,7 +115,7 @@
                                     <h4><?php echo $row["area"];?></h4>
                                     <p><?php echo $row["fechaDePublicacion"];?></p>
                                     <p><?php echo $row["sueldo"];?></p>
-                                    <a class="btn btn-primary px-3" href="RegistrarParticipante.php?id_oferta=<?php echo $row["id_oferta"]; ?>">Participar</a>
+                                    <a class="btn btn-primary px-3" href="FormRegistrarParticipante.php?id_oferta=<?php echo $row["id_oferta"]; ?>">Participar</a>
                                 </div>
                             </div>
                     <?php    

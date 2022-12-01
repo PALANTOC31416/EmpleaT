@@ -83,8 +83,20 @@
                                     <h4><?php echo $row["area"]; ?></h4>
                                     <p><?php echo $row["fechaDePublicacion"];?></p>
                                     <p><?php echo $row["sueldo"];?></p>
+                                    <p>No.participantes: <?php 
+                                        $idOferta = $row["id_oferta"];
+                                        if($result2 = mysqli_query($connection,"SELECT id_postulacion FROM postulaciones WHERE id_oferta='$idOferta'")) {
+                                            $noAspirantes = 0;
+                                            while ($row2 = $result2->fetch_array()) {
+                                                $noAspirantes = $noAspirantes + 1;
+                                            }
+                                            echo $noAspirantes;
+                                            $result2->close();
+                                        }
+                                    ?></p>
                                     <a class="btn btn-primary px-3" href="ModificarOferta.php?id_oferta=<?php echo $row["id_oferta"]; ?>">Editar</a>
                                     <a class="btn btn-primary px-3" href='EliminarOferta.php?id_oferta=<?php echo $row["id_oferta"];?>'>Eliminar</a>
+                                    <a class="btn btn-primary px-3" href='FiltroDePostulaciones.php?id_oferta=<?php echo $row["id_oferta"];?>'>Ver postulantes</a>
                                 </div>
                             </div>
                         <?php
