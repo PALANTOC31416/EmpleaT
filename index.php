@@ -103,21 +103,23 @@
                     <?php 
                         require "Conexion.php";
                         /*invoca una instruccion de sql*/
-                        $result = mysqli_query($connection,'SELECT logo_empresa,nombreOferta,area,fechaDePublicacion,sueldo FROM ofertas JOIN empresas ON ofertas.correo=empresas.correo');
+                        $result = mysqli_query($connection,'SELECT id_oferta,logo_empresa,nombreOferta,area,fechaDePublicacion,sueldo FROM ofertas JOIN empresas ON ofertas.correo=empresas.correo');
                         while($row = mysqli_fetch_array($result)) {
-                            printf('<div class="col-lg-4 mb-2">
-                            <div class="rent-item mb-2">
-                                <img class="img-fluid mb-4" src="%s" alt="">
-                                <br>
-                                <h3 class="text-uppercase">%s</h3>
-                                <br>
-                                <h4>%s</h4>
-                                <p>%s</p>
-                                <p>%s</p>
-                                <a class="btn btn-primary px-3" href="">Participar</a>
+                        ?>
+                            <div class="col-lg-4 mb-2">
+                                <div class="rent-item mb-2">
+                                    <img class="img-fluid mb-4" src="<?php echo $row["logo_empresa"]; ?>" alt="">
+                                    <br>
+                                    <h3 class="text-uppercase"><?php echo $row["nombreOferta"];?></h3>
+                                    <br>
+                                    <h4><?php echo $row["area"];?></h4>
+                                    <p><?php echo $row["fechaDePublicacion"];?></p>
+                                    <p><?php echo $row["sueldo"];?></p>
+                                    <a class="btn btn-primary px-3" href="RegistrarParticipante.php?id_oferta=<?php echo $row["id_oferta"]; ?>">Participar</a>
+                                </div>
                             </div>
-                        </div>',$row["logo_empresa"], $row["nombreOferta"], $row["area"], $row["fechaDePublicacion"],$row["sueldo"]);
-                        }
+                    <?php    
+                    }
                         mysqli_free_result($result);
                         mysqli_close($connection);
                     ?>
